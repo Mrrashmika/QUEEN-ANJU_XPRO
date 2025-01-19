@@ -1,0 +1,91 @@
+{
+  "name": "@kikobeats/time-span",
+  "description": "simple high resolution timing",
+  "homepage": "https://github.com/kikobeats/time-span",
+  "version": "1.0.5",
+  "main": "index.js",
+  "author": {
+    "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
+    "url": "https://kikobeats.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/time-span.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kikobeats/time-span/issues"
+  },
+  "keywords": [
+    "bench",
+    "benchmark",
+    "elapsed",
+    "highres",
+    "hrtime",
+    "measure",
+    "milliseconds",
+    "perf",
+    "performance",
+    "process",
+    "profiling",
+    "span",
+    "time",
+    "timing"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@ksmithut/prettier-standard": "latest",
+    "ava": "latest",
+    "c8": "latest",
+    "ci-publish": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
+    "github-generate-release": "latest",
+    "nano-staged": "latest",
+    "npm-check-updates": "latest",
+    "simple-git-hooks": "latest",
+    "standard": "latest",
+    "standard-version": "latest"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "contributors": "(npx git-authors-cli && npx finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "coverage": "c8 report --reporter=text-lcov > coverage/lcov.info",
+    "lint": "standard",
+    "postrelease": "npm run release:tags && npm run release:github && (ci-publish || npm publish --access=public)",
+    "prerelease": "npm run update:check",
+    "pretest": "npm run lint",
+    "release": "standard-version -a",
+    "release:github": "github-generate-release",
+    "release:tags": "git push --follow-tags origin HEAD:master",
+    "test": "c8 ava",
+    "update": "ncu -u",
+    "update:check": "ncu -- --error-level 2"
+  },
+  "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "nano-staged": {
+    "*.js": [
+      "prettier-standard",
+      "standard --fix"
+    ],
+    "package.json": [
+      "finepack"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx nano-staged"
+  }
+}

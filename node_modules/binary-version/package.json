@@ -1,0 +1,51 @@
+{
+	"name": "binary-version",
+	"version": "7.1.0",
+	"description": "Get the version of a binary in semver format",
+	"license": "MIT",
+	"repository": "sindresorhus/binary-version",
+	"funding": "https://github.com/sponsors/sindresorhus",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "https://sindresorhus.com"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"binary",
+		"executable",
+		"version",
+		"semver",
+		"semantic",
+		"cli"
+	],
+	"dependencies": {
+		"execa": "^8.0.1",
+		"find-versions": "^6.0.0"
+	},
+	"devDependencies": {
+		"ava": "^6.1.2",
+		"tsd": "^0.31.0",
+		"xo": "^0.58.0"
+	},
+	"xo": {
+		"ignores": [
+			"fixture"
+		]
+	}
+}
