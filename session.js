@@ -16,20 +16,20 @@
 //
 //══════════════════════════════════════════════════════════════════════════════════════════════════════//
 //*
-//  * @project_name : © 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙹𝚄 𝗑ᴾᴿᴼ
+//  * @project_name : © king usman  𝗑ᴾᴿᴼ
 //  * @version      : 4.0
-//  * @author       : Janith Rashmika
-//  * @youtube      : https://www.youtube.com/@gamingrash2006
-//  * @description  : © 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙹𝚄 𝗑ᴾᴿᴼ, A Multi-functional WhatsApp bot created by Janith Rashmika.
+//  * @author       : king usman 
+//  * @youtube      : https://whatsapp.com/channel/0029Vb2x7QrJJhzOwbmPEj1b
+//  * @description  : © king usman  𝗑ᴾᴿᴼ, A Multi-functional WhatsApp bot created by king usman .
 //*
 //*
 //Base by Janith Rashmika
 //GitHub: @Mrrashmika
-//WhatsApp: +94717775628
-//Want more free bot scripts? Subscribe to my YouTube channel: https://youtube.com/@gamingrash2006
-//   * Created By GitHub: Mrrashmika
-//   * Credit To Janith Rashmika
-//   * © 2025 © 𝚀𝚄𝙴𝙴𝙽 𝙰𝙽𝙹𝚄 𝗑ᴾᴿᴼ-V4.
+//WhatsApp: +923263411292
+//Want more free bot scripts? fillow to my whatsapp channel: https://whatsapp.com/channel/0029Vb2x7QrJJhzOwbmPEj1b
+//   * Created By GitHub: king usman 
+//   * Credit To king usman 
+//   * © 2025 © king usman 𝗑ᴾᴿᴼ-V4.
 // ⛥┌┤
 // */
 
@@ -40,6 +40,6 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "your session id here",
+SESSION_ID: process.env.SESSION_ID || "ANJU-MD=zVcnVZBB#A5qnoFxlYh8HfVb4Gxa2kswLw6VF3lpW_sd91Xr_QoY",
 PORT: process.env.PORT || "8000"
 };
