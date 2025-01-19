@@ -1,0 +1,66 @@
+{
+  "name": "@jclem/logfmt2",
+  "description": "Parses logs and stringifies logs into the logfmt format",
+  "version": "2.4.3",
+  "author": "Jonathan Clem <jonathan@jclem.net>",
+  "bugs": {
+    "url": "https://github.com/jclem/logfmt2/issues"
+  },
+  "devDependencies": {
+    "@types/benchmark": "^2.1.1",
+    "@types/jest": "^27.0.2",
+    "@types/logfmt": "^1.2.2",
+    "@types/node": "^16.11.1",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "benchmark": "^2.1.4",
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "jest": "^27.3.1",
+    "logfmt": "^1.3.2",
+    "memory-streams": "^0.1.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.4.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": ">= 14.x",
+    "npm": ">= 7.x"
+  },
+  "homepage": "https://github.com/jclem/logfmt2#readme",
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ]
+  },
+  "keywords": [
+    "logfmt",
+    "logging"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jclem/logfmt2.git"
+  },
+  "scripts": {
+    "benchmark": "ts-node ./benchmark.ts",
+    "build": "tsc",
+    "check": "run-p -l --continue-on-error --aggregate-output check:*",
+    "check:build": "tsc --noEmit",
+    "check:lint": "eslint .",
+    "check:format": "prettier . --check",
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "types": "./dist/index.d.ts"
+}

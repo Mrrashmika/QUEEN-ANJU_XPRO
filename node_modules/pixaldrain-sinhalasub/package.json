@@ -1,0 +1,14 @@
+{
+  "name": "pixaldrain-sinhalasub",
+  "version": "1.0.0",
+  "description": "Idk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mrnima-moviedl": "^1.0.0"
+  }
+}
